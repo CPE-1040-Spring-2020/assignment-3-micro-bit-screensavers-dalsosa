@@ -1,7 +1,10 @@
 let dot1 = game.createSprite(2, 2)
+dot1.off()
 let dot2 = game.createSprite(2, 2)
+dot2.off()
 let dot3 = game.createSprite(2, 2)
-let asleep: boolean = false
+dot3.off()
+let asleep: boolean = true
 let g: Gesture
 
 input.onButtonPressed(Button.A, function () {
@@ -26,6 +29,9 @@ input.onGesture(Gesture.TiltRight, function () {
     g = Gesture.TiltRight
 })
 function dots() {
+    dot1.on()
+    dot2.on()
+    dot3.on()
     dot1.move(1);
     basic.pause(100)
     dot2.move(-1);
@@ -40,6 +46,10 @@ function dots() {
     dot2.turn(Direction.Right, 45)
     dot3.ifOnEdgeBounce();
     dot3.turn(Direction.Right, 45)
+    dot1.off()
+    dot2.off()
+    dot3.off()
+
 }
 function jump() {
     basic.showLeds(`
@@ -58,6 +68,7 @@ function jump() {
             . . . . .
             `)
     basic.pause(300)
+    basic.clearScreen()
 }
 function wave() {
     basic.showLeds(`
@@ -100,6 +111,7 @@ function wave() {
             . . . . .
             `)
     basic.pause(200)
+    basic.clearScreen()
 }
 function wink() {
     basic.showLeds(`
@@ -118,6 +130,7 @@ function wink() {
             . # # # .
             `)
     basic.pause(300)
+    basic.clearScreen()
 }
 function FerrisWheel() {
     basic.showLeds(`
@@ -144,28 +157,30 @@ function FerrisWheel() {
             . . # . .
             `)
     basic.pause(500)
+    basic.clearScreen()
 
 }
 basic.forever(function () {
     if (asleep) {
-       if (g==Gesture.Shake) {
-           dots()
-       }
-       else if (g==Gesture.LogoDown) {
-           FerrisWheel()
-       }
-       else if (g==Gesture.LogoUp){
-           wave()
-       }
-       else if (g==Gesture.TiltLeft){
-           jump()
-       }
-       else if (g==Gesture.TiltRight){
-           wink()
-       }
+        if (g == Gesture.Shake) {
+            dots()
+        }
+        else if (g == Gesture.LogoDown) {
+            FerrisWheel()
+        }
+        else if (g == Gesture.LogoUp) {
+            wave()
+        }
+        else if (g == Gesture.TiltLeft) {
+            jump()
+        }
+        else if (g == Gesture.TiltRight) {
+            wink()
+        } else {
+            dots()
+        }
     } else {
         basic.showString("Awake")
     }
 })
-
 

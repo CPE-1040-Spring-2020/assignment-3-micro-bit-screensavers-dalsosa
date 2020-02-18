@@ -126,7 +126,7 @@ This assignnment is more involved than the first two, but uses the same basic mi
 
 ## Screensavers
 
-_The first screen saver are 3 dots that randomly float around the screen that bounce off the edges. The second screen saver is a jumping man doing jumping jacks. The third screen saver is a wave flowing across the screen as it would be in the ocean or beach. The fourth screen saver is a smile face that winks at you._
+_The first screen saver are 3 dots that randomly float around the screen that bounce off the edges. The second screen saver is a jumping man doing jumping jacks. The third screen saver is a wave flowing across the screen as it would be in the ocean or beach. The fourth screen saver is a smile face that winks at you. The fifth screen saver is a ferris wheel changing light patterns_
 
 ## Demo video
 

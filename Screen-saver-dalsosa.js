@@ -135,4 +135,4 @@ basic.forever(function () {
 
 })
 
-Video upload on [imgur](https://imgur.com/a/AVQ4W4B) 
+Video upload on [imgur](https://imgur.com/a/AVQ4W4B/) 

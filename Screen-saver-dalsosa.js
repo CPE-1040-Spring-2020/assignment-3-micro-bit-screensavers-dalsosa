@@ -48,7 +48,6 @@ basic.forever(function () {
             . . . . .
             `)
         basic.pause(300)
-
     }
     function wave() {
         basic.showLeds(`
@@ -110,17 +109,41 @@ basic.forever(function () {
             `)
         basic.pause(300)
     }
+    function FerrisWheel(){
+        basic.showLeds(`
+            . # # # .
+            # . # . #
+            # # # # #
+            # . # . #
+            . # # # .
+            `)
+        basic.pause(500)
+        basic.showLeds(`
+            . # . # .
+            # . # . #
+            . # . # .
+            # . # . #
+            . # . # .
+            `)
+        basic.pause(500)
+        basic.showLeds(`
+            . . # . .
+            . . . . .
+            # . # . #
+            . . . . .
+            . . # . .
+            `)
+        basic.pause(500)
 
+    }
 
     input.onGesture(Gesture.Shake, function () {
         while (asleep == false)
             dots()
-
     })
     input.onLogoDown(function () {
         while (asleep == false)
             jump()
-
     })
     input.onLogoUp(function () {
         while (asleep == false)
@@ -130,9 +153,10 @@ basic.forever(function () {
         while (asleep == false)
             wink()
     })
-
-
-
+    input.onGesture(Gesture.TiltRight, function () {
+        while (asleep == false)
+            FerrisWheel()
+    })
 })
 
 

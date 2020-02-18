@@ -126,11 +126,11 @@ This assignnment is more involved than the first two, but uses the same basic mi
 
 ## Screensavers
 
-_TODO: Add your screensaver descriptions!!!_
+_The first screen saver are 3 dots that randomly float around the screen that bounce off the edges. The second screen saver is a jumping man doing jumping jacks. The third screen saver is a wave flowing across the screen as it would be in the ocean or beach. The fourth screen saver is a smile face that winks at you._
 
 ## Demo video
 
-_TODO: Add your video URL here!!!_
+_Video uploaded on [Imgur](https://imgur.com/a/AVQ4W4B)_
 
 
-Video uploaded on [Imgur](https://imgur.com/a/AVQ4W4B)
+
